@@ -22,12 +22,15 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          npm cache clean --force
+          #npm cache clean --force
           npm ci
           npm install -g puppeteer
 
       - name: Running
         run: |
+          npm cache clean --force
+          npm install
+          npm run task
           node src/main.js
         env:
           CHAT_ID: ${{ secrets.CHAT_ID }}
