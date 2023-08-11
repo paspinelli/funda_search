@@ -15,7 +15,7 @@ const newResults = new Set();
 const houses = [];
 const { CHAT_ID, BOT_API } = process.env;
 
-const urls = ['https://www.funda.nl/zoeken/huur?selected_area=["provincie-noord-holland","provincie-utrecht","regio-agglomeratie-leiden-en-bollenstreek","lelystad","almere","voorburg","wassenaar","leidschendam","zoetermeer","gouda"]&price="-1500"&floor_area="75-"&rooms="2-"&object_type=["house"]'];
+const urls = ['https://www.funda.nl/zoeken/huur?selected_area=["provincie-noord-holland","provincie-utrecht","regio-agglomeratie-leiden-en-bollenstreek","lelystad","almere","voorburg","wassenaar","leidschendam","zoetermeer","gouda"]&price="-1500"&floor_area="75-"&rooms="2-"&object_type=["house"]/'];
 
 const runTask = async () => {
     for (const url of urls) {
