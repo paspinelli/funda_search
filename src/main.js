@@ -15,7 +15,7 @@ const newResults = new Set();
 const houses = [];
 const { CHAT_ID, BOT_API } = process.env;
 
-const urls = ['https://www.funda.nl/en/huur/amsterdam/beschikbaar/0-4000/40+woonopp/2+slaapkamers/1-dag/'];
+const urls = ['https://www.funda.nl/en/koop/amsterdam/beschikbaar/0-30000000/40+woonopp/2+slaapkamers/1-dag/'];
 
 const runTask = async () => {
     for (const url of urls) {
