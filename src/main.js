@@ -15,9 +15,7 @@ const newResults = new Set();
 const houses = [];
 const { CHAT_ID, BOT_API } = process.env;
 
-const urls = [
-    'https://www.funda.nl/en/koop/amsterdam/beschikbaar/0-300000/40+woonopp/2+slaapkamers/1-dag/',
-    'https://www.funda.nl/en/koop/haarlem/beschikbaar/0-300000/40+woonopp/2+slaapkamers/1-dag/',];
+const urls = 'https://www.funda.nl/zoeken/huur?selected_area=%5B%22provincie-noord-holland%22%2C%22provincie-utrecht%22%2C%22regio-agglomeratie-leiden-en-bollenstreek%22%2C%22lelystad%22%2C%22almere%22%2C%22voorburg%22%2C%22wassenaar%22%2C%22leidschendam%22%2C%22zoetermeer%22%2C%22gouda%22%5D&price=%22-1500%22&floor_area=%2275-%22&rooms=%222-%22&object_type=%5B%22house%22%5D';
 
 const runTask = async () => {
     for (const url of urls) {
