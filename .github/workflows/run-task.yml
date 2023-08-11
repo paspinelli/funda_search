@@ -1,4 +1,5 @@
 name: Run Task
+
 on:
   workflow_dispatch:
   schedule:
@@ -14,11 +15,19 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14' # Utiliza la versión de Node.js que necesites
+
+      - name: Install Dependencies
+        run: |
+          npm ci
+          npm install -g puppeteer
+
       - name: Running
         run: |
-          npm cache clean --force
-          npm install
-          npm run task
+          node src/main.js
         env:
           CHAT_ID: ${{ secrets.CHAT_ID }}
           BOT_API: ${{ secrets.BOT_API }}
